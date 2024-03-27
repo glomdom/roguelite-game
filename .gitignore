@@ -1,0 +1,9 @@
+# Project place file
+/autistic.rbxlx
+
+# Roblox Studio lock files
+/*.rbxlx.lock
+/*.rbxl.lock
+
+# fucking die
+/Packages/
