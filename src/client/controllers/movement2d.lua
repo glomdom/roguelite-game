@@ -56,7 +56,7 @@ end
 function _lookUpdate()
 	local plr = Players.LocalPlayer
 	local hrp = plr.Character:FindFirstChild("HumanoidRootPart")
-    local lookDir
+    local lookDir = nil
 
 	if (Right == 0 and Left == 0) or (Right == 1 and Left == 1) then
 		lookDir = -workspace.CurrentCamera.CFrame.LookVector * Vector3.new(1, 0, 1)
@@ -68,8 +68,6 @@ function _lookUpdate()
 
     local tween = Utils.genericTween(hrp, CFrame.lookAt(hrp.Position, hrp.Position + lookDir), MovementController2D.LookTime, "CFrame", Enum.EasingStyle.Circular)
     tween:Play()
-
-    Utils.genericTween()
 end
 
 function _update(_dt: number)
